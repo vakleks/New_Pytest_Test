@@ -27,5 +27,5 @@ def setup(request, get_webdriver):
         request.cls.driver = driver
     driver.get(url)
     yield driver
-    driver.quite()
+    driver.quit()
 
