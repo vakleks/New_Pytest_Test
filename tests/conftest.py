@@ -19,7 +19,7 @@ def get_chromedriver(get_chrome_options):
     return driver
 
 
-@pytest.fixture
+@pytest.fixture(scope='function')
 def setup(request, get_webdriver):
     driver = get_webdriver
     url = 'https://www.macys.com/'
